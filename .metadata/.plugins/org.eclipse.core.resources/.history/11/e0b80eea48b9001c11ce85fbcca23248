@@ -1,0 +1,5 @@
+package repository.user;
+
+public interface AuthDao {
+	public int signinUsernameAndPassword(String username, String password);
+}

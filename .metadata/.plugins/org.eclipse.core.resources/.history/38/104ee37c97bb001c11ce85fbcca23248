@@ -1,0 +1,5 @@
+package repository;
+
+public interface UserDao {
+	public int updateUserByUserCode(int userCode)
+}

@@ -1,0 +1,30 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>마이페이지</title>
+<link rel="stylesheet" href="/JspStudy_4268/static/css/style.css">
+</head>
+<body>
+	<div id="container">
+		<div>
+			<ul>
+				<li>사용자 이름</li>
+				<li>jongbum</li>
+			</ul>
+			<ul>
+				<li>이름</li>
+				<li>이종범</li>
+			</ul>
+			<ul>
+				<li>이메일</li>
+				<li>jongbum@kakao.com</li>
+			</ul>
+		</div>
+		<button>회원 정보 수정</button>
+		<button>비밀번호 변경</button>
+	</div>
+</body>
+</html>

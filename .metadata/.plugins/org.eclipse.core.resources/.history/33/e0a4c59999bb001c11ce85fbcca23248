@@ -1,0 +1,27 @@
+package web.service;
+
+import db_study.UserDao;
+import user.User;
+
+public class ProfileServiceImpl implements ProfileService {
+	private final UserDao userDao;
+	
+	public ProfileServiceImpl(UserDao userDao) {
+		this.userDao = userDao;
+	}
+	
+	@Override
+	public boolean updateProfile(int userCode, String name, String email) {
+		User user = User.builder()
+				.user_code(userCode)
+				.name(name)
+				.email(email)
+				.build();
+		int result = userDao.updateUserByUserCode(user);
+		if(result == 1) {
+			
+		}
+				
+		return false;
+	}
+}

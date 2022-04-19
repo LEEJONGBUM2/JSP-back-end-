@@ -1,0 +1,59 @@
+package db_study;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.util.ArrayList;
+
+import db.DBConnectionMgr;
+import repository.user.User;
+
+public class UserDao {
+	private final DBConnectionMgr pool;
+	
+	public UserDao(DBConnectionMgr pool) {
+		this.pool = pool;
+	}
+	
+	public User getUser(String username) {
+		return null;
+	}
+	
+	public ArrayList<User> getUserAll(){
+		String sql = null;
+		
+		Connection con = null; //3가지는 필수이다
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		
+		ArrayList<User> userList = new ArrayList<User>();
+
+		try {
+			con = pool.getConnection();
+			sql = "select * from user_mst";
+			pstmt = con.prepareStatement(sql);
+			rs = pstmt.executeQuery(); //executeQuery는 쿼리를 실행하게 만들어준다
+				
+			while(rs.next()) {
+				User user = User.builder()
+						.user_code(rs.getInt(1))
+						.username(rs.getString(2))
+						.password(rs.getString(3))
+						.name(rs.getString(4))
+						.email(rs.getString(5))
+						.create_date(rs.getDate(6).toLocalDate())
+						.update_date(rs)
+						.build();
+				userList.add(user);
+			}
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		//freeConnection은 반납을 하는 것이다.
+		return userList;
+	}
+
+	
+
+}
