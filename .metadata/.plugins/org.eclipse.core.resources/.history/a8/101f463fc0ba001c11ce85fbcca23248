@@ -1,0 +1,5 @@
+package web.filer;
+
+public class DecodingFilter {
+
+}

@@ -1,0 +1,1 @@
+0:0:0:0:0:0:0:1 - - [10/Apr/2022:22:51:47 +0900] "GET /JspStudy_4268/study/%EB%94%94%EC%9E%90%EC%9D%B8%ED%8C%A8%ED%84%B4/model2.jsp HTTP/1.1" 200 159

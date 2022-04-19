@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;web.xml&apos; to &apos;views&apos;&#x0D;&#x0A;- Original project: &apos;Servers&apos;&#x0D;&#x0A;- Destination element: &apos;views&apos;&#x0D;&#x0A;- Original element: &apos;web.xml&apos;" description="Copy file" element1="Tomcat v9.0 Server at localhost-config/web.xml" files="1" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1649990047776" target="/JspStudy_4268/src/main/webapp/WEB-INF/views" units="0" version="1.0"/>
+</session>

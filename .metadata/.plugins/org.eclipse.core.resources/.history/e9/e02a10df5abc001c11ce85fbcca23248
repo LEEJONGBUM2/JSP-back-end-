@@ -1,0 +1,26 @@
+const itemInputs = document.querySelectorAll(".item-input");
+const originPasswordHidden = document.querySelector(".origin-password");
+const passwordUpdateBtn = document.querySelector(".password-update-btn");
+const profileUpdateBtn = document.querySelector(".profile-update-btn");
+
+function isEmpty(str){
+	return typeof str == "undefined" || str == "" || str == null;
+}
+
+passwordUpdateBtn.onclick = () => {
+	for(let i = 0; i < itemInputs.length; i++){
+		itemInput = itemInputs[i].value;
+		if(isEmpty(itemInput)){
+			if(i == 0){
+				alert("이전 비밀번호를 입력해주세요.");
+			}else if(i == 1){
+				alert("새 비밀번호를 입력해 주세요.");
+			}else{
+				if(itemInput[i - 1].value != itemInput){
+					alert("새 비밀번호가 일치하지 않습니다.");
+					return;
+				}
+			}
+		}
+	}	
+}

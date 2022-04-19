@@ -1,0 +1,15 @@
+package repository;
+
+public class UserDaoImpl implements UserDao {
+	private final DBConnectionMgr pool;
+	
+	public UserDaoImpl(DBConnectionMgr pool) {
+		
+	}
+	
+	@Override
+	public int updateUserByUserCode(int userCode) {
+		
+		return 0;
+	}
+}

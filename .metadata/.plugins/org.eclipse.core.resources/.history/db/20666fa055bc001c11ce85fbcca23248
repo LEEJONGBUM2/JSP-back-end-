@@ -1,0 +1,64 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>마이페이지</title>
+<link rel="stylesheet" href="/JspStudy_4268/static/css/mypage.css">
+</head>
+<body>
+	<div id="container">
+		<div class="mypage-items">
+			<table>
+				<tr>
+					<td>이전 비밀번호 확인</td>
+					<td><input type="password"></td>
+				</tr>
+				<tr>
+					<td>새 비밀번호</td>
+					<td><input type="password"></td>
+				</tr>
+				<tr>
+					<td>새 비밀번호 확인</td>
+					<td><input type="password"></td>
+				</tr>
+				
+			</table>
+			<div>
+				<button type="button" class="profile-update-btn">회원 정보 수정</button>
+				<button type="button" class="password-update-btn">비밀번호 변경</button>
+			</div>
+		</div>
+	</div>	
+	<script type="text/javascript">
+		const profileUpdateBtn = document.querySelector(".profile-update-btn");
+		const passwordUpdateBtn = document.querySelector(".password-update-btn");
+		
+		profileUpdateBtn.onclick = () => {
+			location.href = "/JspStudy_4268/profile/update";
+		}
+		
+		passwordUpdateBtn.onclick = () => {
+			location.href = "/JspStudy_4268/profile/update/password";
+		}
+	</script>
+	
+			<!-- <ul>
+				<li>사용자 이름</li>
+				<li>jongbum</li>
+			</ul>
+			<ul>
+				<li>이름</li>
+				<li>이종범</li>
+			</ul>
+			<ul>
+				<li>이메일</li>
+				<li>jongbum@kakao.com</li>
+			</ul>
+		</div>
+		<button>회원 정보 수정</button>
+		<button>비밀번호 변경</button> -->
+	
+</body>
+</html>

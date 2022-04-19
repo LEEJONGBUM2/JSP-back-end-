@@ -1,0 +1,6 @@
+Application 저장소
+생명주기: 톰켓서버 start -> stop
+
+session 저장소
+request 저장소
+cookie 저장소

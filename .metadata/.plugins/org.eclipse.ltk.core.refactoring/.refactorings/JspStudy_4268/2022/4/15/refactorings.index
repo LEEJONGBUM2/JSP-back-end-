@@ -1,0 +1,21 @@
+1649204251119	Delete element
+1649204545705	Rename resource 'body.jsp'
+1649204549736	Copy file
+1649206926563	Move 'loginController.jsp' to 'forward'
+1649206947295	Move 5 resources to 'include'
+1649211655670	Rename resource 'user-info-input.jsp'
+1649216271013	Move 'signin_form.jsp' to 'view'
+1649216276535	Move 'signin_form.jsp' to 'request'
+1649216412733	Encapsulate field 'username'
+1649216421840	Encapsulate field 'phone'
+1649216428280	Encapsulate field 'email'
+1649216438694	Encapsulate field 'address'
+1649216531484	Move 'signin_form.jsp' to 'src'
+1649216540760	Move 'signin_form.jsp' to 'webapp'
+1649216549748	Move 'signin_form.jsp' to 'study'
+1649216585641	Move 'signin_form.jsp' to 'webapp'
+1649216618015	Move 'signin_form.jsp' to 'study'
+1649381543158	Copy file
+1649382856801	Delete element
+1649385563279	Rename type 'GradeServlet'
+1649389019362	Delete element

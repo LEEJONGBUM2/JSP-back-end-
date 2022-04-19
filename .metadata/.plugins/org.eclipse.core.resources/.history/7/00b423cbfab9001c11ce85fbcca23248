@@ -1,0 +1,9 @@
+package web.service;
+
+import java.util.Map;
+
+import user.User;
+
+public interface AuthService {
+	public Map<String, ?> signin(String username, String password);
+}

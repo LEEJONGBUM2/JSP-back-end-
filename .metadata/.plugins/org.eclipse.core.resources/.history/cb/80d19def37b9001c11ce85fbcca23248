@@ -1,0 +1,27 @@
+package db_study;
+
+import java.util.ArrayList;
+
+import db.DBConnectionMgr;
+import repository.user.user;
+
+public class UserDaoTest {
+
+	public static void main(String[] args) {
+		private final DBConnectionMgr pool;
+		
+		public UserDao(DBConnectionMgr pool) {
+			this.pool = pool;
+		}
+		
+		public User getUser() {
+			return null;
+		}
+		
+		public ArrayList<User> getUserAll(){
+			return null;
+		}
+
+	}
+
+}

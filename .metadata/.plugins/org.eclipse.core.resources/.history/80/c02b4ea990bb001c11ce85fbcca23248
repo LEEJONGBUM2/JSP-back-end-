@@ -1,0 +1,42 @@
+const profileInputs = documnet.querySelectorAll(".profile-input");
+const originPrincipal = {
+	"name": profileInputs[0].value,
+	"email": profileInputs[1].valie
+};
+
+function isEmpty(str){
+	return str == "" || str == null || typeof str == "undefined";
+}
+
+const profileInputs = document.querySelectorAll(".profile-input");
+const updateSubmitBtn = document.querySelector(".update-submit-btn");
+const passwordUpdateBtn = document.querySelector(".password-update-btn");
+
+updateSubmitBtn.onclick = () => {
+	let name = profileInputs[0].value;
+	let email = profileInputs[1].value;
+	
+	//1. 빈값이 아니어야한다.
+	
+	/*if(name == "" || name == null || typeof name == "undefined"){
+		
+	}else if(email == "" || email == null || typeof email == "undefined"){
+		
+	}*/
+	
+	//2. 기존(originData랑 현재 data랑 변화가 있는지 체크)
+	
+	//1,2 조건이 만족되면 submit()
+	/*if(isempty == profileInput[0].value || profileInput[1].value){
+		alert("해당 값은 비어 있습니다.");
+	}else if(originPrincipal.name != profileInput[0].value && originPrincipal.email != profileInput[1].value){
+		alert("해당 값은 포함되어 있습니다.");	
+	}*/
+	
+	alert("회원 정보 수정 요청");
+	
+	console.log(originPrincipal.name);
+	console.log(originPrincipal.email);
+	console.log(profileInputs[0].value);
+	console.log(profileInputs[1].value);
+}

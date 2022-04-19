@@ -1,0 +1,43 @@
+package web.filter;
+
+import java.io.IOException;
+import javax.servlet.Filter;
+import javax.servlet.FilterChain;
+import javax.servlet.FilterConfig;
+import javax.servlet.ServletException;
+import javax.servlet.ServletRequest;
+import javax.servlet.ServletResponse;
+import javax.servlet.annotation.WebFilter;
+
+import db.DBConnectionMgr;
+import db_study.UserDao;
+import repository.AuthDao;
+import repository.AuthDaoImpl;
+import repository.UserDaoImpl;
+
+@WebFilter("/*")
+public class InitFilter implements Filter {
+	private DBConnectionMgr pool;
+	private AuthDao authDao;
+	private UserDao userDao;
+	
+	public void init(FilterConfig fConfig) throws ServletException {
+		pool = DBConnectionMgr.getInstance();
+		authDao = new AuthDaoImpl(pool);
+		userDao = new UserDaoImpl(pool);
+	}
+
+	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
+		request.setCharacterEncoding("UTF-8");
+		response.setCharacterEncoding("UTF-8");
+		
+		request.getServletContext();
+		
+		chain.doFilter(request, response);	
+	}
+
+	public void destroy() {
+		// TODO Auto-generated method stub
+	}
+
+}

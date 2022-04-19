@@ -1,0 +1,43 @@
+package web.controller.profile;
+
+import java.io.IOException;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import db.DBConnectionMgr;
+import repository.UserDao;
+import repository.UserDaoImpl;
+import web.service.ProfileService;
+import web.service.ProfileServiceImpl;
+
+@WebServlet("/profile/update")
+public class ProfileUpdateServlet extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+	private ProfileService profileService;
+	
+	@Override
+	public void init() throws ServletException {
+//		DBConnectionMgr pool = DBConnectionMgr.getInstance();
+//		UserDao userDao = new UserDaoImpl(pool);
+		profileService = new ProfileServiceImpl(userDao);
+	}
+   
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		request.getRequestDispatcher("/WEB-INF/views/profile/profile-update.jsp").forward(request, response);
+	}
+	
+	@Override
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException{
+		//String username = req.getParameter("username");
+		
+		//이름, 이메일 출력
+		String name = req.getParameter("name");
+		String email = req.getParameter("email");
+		System.out.println("이름: " + name);
+		System.out.println("이메일: " + email);
+	}
+
+}

@@ -1,0 +1,55 @@
+package web.controller.profile;
+
+import java.io.IOException;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+import repository.user.User;
+
+@WebServlet("/profile/update/password")
+public class PasswordUpdateServlet extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+   
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		request.getRequestDispatcher("/WEB-INF/views/profile/password-update.jsp").forward(request, response);
+	}
+	
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		String password = request.getParameter("password");
+		String newPassword = request.getParameter("newPassword");
+		String newPasswordConfirm = request.getParameter("newPasswordConfirm");
+		
+		HttpSession session = request.getSession();
+		
+		User principalUser = (User)session.getAttribute("principal");
+		
+		boolean flag = profileService.updatePassword();
+		
+	}
+	
+	
+	@Override
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
+		//String username = req.getParameter("username");
+		
+		//이름, 이메일 출력
+		String name = request.getParameter("name");
+		String email = request.getParameter("email");
+//		System.out.println("이름: " + name);
+//		System.out.println("이메일: " + email);
+		HttpSession session = request.getSession();
+		
+		User principalUser = (User)session.getAttribute("principal");
+		
+		boolean flag = profileService.updateProfile(principalUser.getUser_code(), name, email);
+		if(flag == true) {
+			session.setAttribute("principal", authService.getUser(principalUser.getUsername()));
+			response.sendRedirect("/JspStudy_4268/profile/mypage");
+		}
+	}
+
+}

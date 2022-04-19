@@ -1,0 +1,16 @@
+package repository;
+
+public class AuthDaoImpl implement AuthDao{
+	
+	private final DBConnectionMgr pool;
+	
+	public AuthDaoImpl(DBConnectionMgr pool) {
+		this.pool = pool;
+	}
+	
+	@Override
+	public int signinByUseranmeAndPassword(String username, String passowrd) {
+		
+	}
+
+}

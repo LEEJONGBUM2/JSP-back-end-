@@ -1,0 +1,16 @@
+package web.service;
+
+import user.User;
+
+public class ProfileServiceImpl implements ProfileService {
+	@Override
+	public boolean updateProfile(int userCode, String name, String email) {
+		User user = User.builder()
+				.user_code(userCode)
+				.name(name)
+				.email(email)
+				.build();
+		int result =
+		return false;
+	}
+}

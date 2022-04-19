@@ -1,0 +1,12 @@
+const itemInputs = document.querySelectorAll(".item-input");
+const originPasswordHidden = document.querySelector(".origin-password");
+const passwordUpdateBtn = document.querySelector(".password-update-btn");
+const profileUpdateBtn = document.querySelector(".profile-update-btn");
+
+function isEmpty(str){
+	return typeof str == "undefined" || str == "" || str == null;
+}
+
+passwordUpdateBtn.onclick = () => {
+	if(isEmpty())	
+}

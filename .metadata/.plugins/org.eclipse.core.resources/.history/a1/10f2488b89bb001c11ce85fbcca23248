@@ -1,0 +1,15 @@
+const profileInputs = documnet.querySelectorAll(".profile-input");
+const originPrincipal = {
+	"name": profileInputs[0].value,
+	"email": profileInputs[1].valie
+};
+
+const profileInputs = document.querySelectorAll(".profile-input");
+const updateSubmitBtn = document.querySelector(".update-submit-btn");
+const passwordUpdateBtn = document.querySelector(".password-update-btn");
+
+updateSubmitBtn.onclick = () => {
+	console.log(originPrincipal.name);
+	console.log(originPrincipal.email);
+	console.log(originPrincipal.name);
+}

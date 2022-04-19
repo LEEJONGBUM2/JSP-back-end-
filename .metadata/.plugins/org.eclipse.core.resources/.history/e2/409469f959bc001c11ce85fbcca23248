@@ -1,0 +1,2 @@
+const itemInputs = document.querySelectorAll(".item-input");
+const originPasswordHidden = document.querySelector

@@ -1,0 +1,12 @@
+content_assist_lru_history=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><history maxLHS\="100" maxRHS\="10"><lhs name\="db.DBConnectionMgr"><rhs name\="db.DBConnectionMgr"/></lhs><lhs name\="java.lang.Iterable"><rhs name\="java.sql.SQLDataException"/></lhs><lhs name\="java.lang.Exception"><rhs name\="java.sql.SQLDataException"/></lhs><lhs name\="java.lang.Throwable"><rhs name\="java.sql.SQLDataException"/></lhs><lhs name\="java.sql.SQLException"><rhs name\="java.sql.SQLDataException"/></lhs><lhs name\="java.util.Map"><rhs name\="java.util.HashMap"/></lhs><lhs name\="web.service.AuthService"><rhs name\="web.service.AuthServiceImpl"/></lhs><lhs name\="repository.AuthDao"><rhs name\="repository.AuthDaoImpl"/></lhs><lhs name\="repository.UserDao"><rhs name\="repository.UserDaoImpl"/></lhs><lhs name\="web.service.ProfileService"><rhs name\="web.service.ProfileServiceImpl"/></lhs><lhs name\="db_study.UserDao"><rhs name\="db_study.UserDao"/></lhs><lhs name\="repository.user.User"><rhs name\="repository.user.User"/></lhs></history>
+content_assist_number_of_computers=15
+content_assist_proposals_background=255,255,255
+content_assist_proposals_foreground=0,0,0
+eclipse.preferences.version=1
+org.eclipse.jdt.internal.ui.navigator.layout=1
+org.eclipse.jdt.internal.ui.navigator.librariesnode=true
+org.eclipse.jdt.ui.formatterprofiles.version=21
+spelling_locale_initialized=true
+typefilter_migrated=true
+useAnnotationsPrefPage=true
+useQuickDiffPrefPage=true
